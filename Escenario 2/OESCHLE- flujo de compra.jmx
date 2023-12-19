@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="OESCHLE- flujo de compra">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Http URL/API Test">
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController">
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Cookie Manager">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="abrir pestaña del producto">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://busca.oechsle.pe/</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="buscar producto iphone">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="query" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">query</stringProp>
+                <stringProp name="Argument.value">iphone+15+pro+max</stringProp>
+                <stringProp name="Argument.desc">query</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">busca.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/search</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">busca.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; janus_sid=bf0ad5da-ed47-44db-8d9c-872b3e571de1; biggy-session-oechsle=vSg1JiOi52Nzvb8yqG1lm; checkout.vtex.com=__ofid=9e54c503b4264297bbb717951f65b31d; CheckoutOrderFormOwnership=; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; biggy-event-queue=; bsearch-navigation-info=%7B%22bing%22%3Afalse%2C%22google%22%3Afalse%7D; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://busca.oechsle.pe/search?query=iphone%2015%20pro</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">document</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">navigate</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-user" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-user</stringProp>
+                <stringProp name="Header.value">?1</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="upgrade-insecure-requests" elementType="Header">
+                <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="agregar producto al carrito">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <stringProp name="Argument.value">{&quot;orderItems&quot;:[{&quot;id&quot;:&quot;2504492&quot;,&quot;quantity&quot;:&quot;1&quot;,&quot;seller&quot;:&quot;1&quot;}],&quot;expectedOrderFormSections&quot;:[&quot;items&quot;,&quot;totalizers&quot;,&quot;clientProfileData&quot;,&quot;shippingData&quot;,&quot;paymentData&quot;,&quot;sellers&quot;,&quot;messages&quot;,&quot;marketingData&quot;,&quot;clientPreferencesData&quot;,&quot;storePreferencesData&quot;,&quot;giftRegistryData&quot;,&quot;ratesAndBenefitsData&quot;,&quot;openTextField&quot;,&quot;commercialConditionData&quot;,&quot;customData&quot;]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json; charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">az_botm=806e13758d7dfd51215f028cc40600e4; az_asm=C1B52FFDB23B6C8D0E5490432522D2762B921803DB9C7E1757CE741BA4F3050EE3A0E50AE2CE5F432E19B4BB71C7DE55E57FF0C3CCD4E0C44D8E94CACA6A4564; checkout.vtex.com=__ofid=9036f0dc00214c248418ceb71d1e8a57; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8uIiwiY291bnRyeUNvZGUiOiJQRVIiLCJjdWx0dXJlSW5mbyI6ImVzLVBFIiwiY2hhbm5lbFByaXZhY3kiOiJwdWJsaWMifQ; rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; biggy-session-oechsle=vSg1JiOi52Nzvb8yqG1lm; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IkQ0NkM1NEJGRjhERjJDRDE4RjZDMzEyMDBFNEE3MTU2QzM4QUIwQUYiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM2OTU2ODksImlhdCI6MTcwMzAwNDQ4OSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6Ijc3ZTE4MmM3LWJkYTYtNDc4NC1iYzQ2LTQzNTJkNDY1NzVmYiJ9.6-njLrJA6gQ4DPkaRNG9Oc0-nt-DJZcTlpN-5nO2WPX8zd3mUCoGUPo1kndG8cmmkqlRyOJf-hUD8Dtg-RpVnQ; bsearch-navigation-info=%7B%22bing%22%3Afalse%2C%22google%22%3Afalse%7D; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; CheckoutOrderFormOwnership=AGzcDtjBlfGT0YRcqM7IV0XdlFK8lcb2C96ZEBA6ZVevWF6%2Bnbj1nRpANqXg46%2BZ57MwXu3z2wVPslP3ZEe7LvOxycG7Qb0JYCPYXDVP61RyjlX5FAnsTDGLN2p5MlOT; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/apple-iphone-15-plus-6-7-256gb-negro-2504492-2504492/p</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-requested-with" elementType="Header">
+                <stringProp name="Header.name">x-requested-with</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.oechsle.pe/checkout">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/checkout</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/apple-iphone-15-plus-6-7-256gb-negro-2504492-2504492/p</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="check legal email">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="email" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">email</stringProp>
+                <stringProp name="Argument.value">testRendimiento@gmail.com</stringProp>
+                <stringProp name="Argument.desc">email</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">api.oechsleonline.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/masterdata/v1/checks-legal</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">api.oechsleonline.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">cross-site</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="first form">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <stringProp name="Argument.value">{&#xd;
+    &quot;firstEmail&quot;: &quot;testRendimiento@gmail.com&quot;,&#xd;
+    &quot;email&quot;: &quot;testRendimiento@gmail.com&quot;,&#xd;
+    &quot;firstName&quot;: &quot;test&quot;,&#xd;
+    &quot;lastName&quot;: &quot;rendimiento&quot;,&#xd;
+    &quot;document&quot;: &quot;65416552&quot;,&#xd;
+    &quot;phone&quot;: &quot;+51 955 625 895&quot;,&#xd;
+    &quot;documentType&quot;: &quot;DNI&quot;,&#xd;
+    &quot;isCorporate&quot;: false,&#xd;
+    &quot;corporateName&quot;: null,&#xd;
+    &quot;tradeName&quot;: null,&#xd;
+    &quot;corporateDocument&quot;: null,&#xd;
+    &quot;expectedOrderFormSections&quot;: [&#xd;
+        &quot;items&quot;,&#xd;
+        &quot;totalizers&quot;,&#xd;
+        &quot;clientProfileData&quot;,&#xd;
+        &quot;shippingData&quot;,&#xd;
+        &quot;paymentData&quot;,&#xd;
+        &quot;sellers&quot;,&#xd;
+        &quot;messages&quot;,&#xd;
+        &quot;marketingData&quot;,&#xd;
+        &quot;clientPreferencesData&quot;,&#xd;
+        &quot;storePreferencesData&quot;,&#xd;
+        &quot;giftRegistryData&quot;,&#xd;
+        &quot;ratesAndBenefitsData&quot;,&#xd;
+        &quot;openTextField&quot;,&#xd;
+        &quot;commercialConditionData&quot;,&#xd;
+        &quot;customData&quot;&#xd;
+    ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json; charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">az_botm=806e13758d7dfd51215f028cc40600e4; az_asm=C1B52FFDB23B6C8D0E5490432522D2762B921803DB9C7E1757CE741BA4F3050EE3A0E50AE2CE5F432E19B4BB71C7DE55E57FF0C3CCD4E0C44D8E94CACA6A4564; checkout.vtex.com=__ofid=9036f0dc00214c248418ceb71d1e8a57; rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; CheckoutOrderFormOwnership=AGzcDtjBlfGT0YRcqM7IV0XdlFK8lcb2C96ZEBA6ZVevWF6%2Bnbj1nRpANqXg46%2BZ57MwXu3z2wVPslP3ZEe7LvOxycG7Qb0JYCPYXDVP61RyjlX5FAnsTDGLN2p5MlOT; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-requested-with" elementType="Header">
+                <stringProp name="Header.name">x-requested-with</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="metodo de entrega">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="_fields" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">_fields</stringProp>
+                <stringProp name="Argument.value">isActive,metodoEntrega</stringProp>
+                <stringProp name="Argument.desc">_fields</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">az_botm=806e13758d7dfd51215f028cc40600e4; az_asm=C1B52FFDB23B6C8D0E5490432522D2762B921803DB9C7E1757CE741BA4F3050EE3A0E50AE2CE5F432E19B4BB71C7DE55E57FF0C3CCD4E0C44D8E94CACA6A4564; checkout.vtex.com=__ofid=9036f0dc00214c248418ceb71d1e8a57; rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9; CheckoutOrderFormOwnership=AGzcDtjBlfGT0YRcqM7IV0XdlFK8lcb2C96ZEBA6ZVevWF6%2Bnbj1nRpANqXg46%2BZDSNlA3Nq9nDiypp5U%2Bu5k%2BRWPXVMA01GGjeL%2B1hOVX%2Fp%2BC3q7yJIZTQkpABfllFxFQ1IB9gZMtr5EUXXdEl6PQ%3D%3D</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-requested-with" elementType="Header">
+                <stringProp name="Header.name">x-requested-with</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="datos de despacho o entrega">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <stringProp name="Argument.value">{&#xd;
+    &quot;logisticsInfo&quot;: [&#xd;
+        {&#xd;
+            &quot;deliveryWindow&quot;: {&#xd;
+                &quot;startDateUtc&quot;: &quot;2024-01-03T10:00:00+00:00&quot;,&#xd;
+                &quot;endDateUtc&quot;: &quot;2024-01-03T22:00:59+00:00&quot;,&#xd;
+                &quot;price&quot;: 0,&#xd;
+                &quot;lisPrice&quot;: 0,&#xd;
+                &quot;tax&quot;: 0&#xd;
+            },&#xd;
+            &quot;addressId&quot;: &quot;TD114&quot;,&#xd;
+            &quot;itemIndex&quot;: 0,&#xd;
+            &quot;selectedDeliveryChannel&quot;: &quot;pickup-in-point&quot;,&#xd;
+            &quot;selectedSla&quot;: &quot;Tienda - Barranca - 114 (TD114)&quot;&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;clearAddressIfPostalCodeNotFound&quot;: false,&#xd;
+    &quot;selectedAddresses&quot;: [&#xd;
+        {&#xd;
+            &quot;addressType&quot;: &quot;residential&quot;,&#xd;
+            &quot;receiverName&quot;: &quot;n nn&quot;,&#xd;
+            &quot;addressId&quot;: &quot;5109017147490&quot;,&#xd;
+            &quot;isDisposable&quot;: true,&#xd;
+            &quot;postalCode&quot;: &quot;150201&quot;,&#xd;
+            &quot;city&quot;: &quot;Barranca&quot;,&#xd;
+            &quot;state&quot;: &quot;Lima&quot;,&#xd;
+            &quot;country&quot;: &quot;PER&quot;,&#xd;
+            &quot;street&quot;: null,&#xd;
+            &quot;number&quot;: null,&#xd;
+            &quot;neighborhood&quot;: &quot;Barranca&quot;,&#xd;
+            &quot;complement&quot;: null,&#xd;
+            &quot;reference&quot;: null,&#xd;
+            &quot;geoCoordinates&quot;: [],&#xd;
+            &quot;addressQuery&quot;: &quot;&quot;&#xd;
+        },&#xd;
+        {&#xd;
+            &quot;addressType&quot;: &quot;search&quot;,&#xd;
+            &quot;receiverName&quot;: null,&#xd;
+            &quot;addressId&quot;: &quot;TD114&quot;,&#xd;
+            &quot;isDisposable&quot;: true,&#xd;
+            &quot;postalCode&quot;: &quot;150201&quot;,&#xd;
+            &quot;city&quot;: &quot;Barranca&quot;,&#xd;
+            &quot;state&quot;: &quot;Lima&quot;,&#xd;
+            &quot;country&quot;: &quot;PER&quot;,&#xd;
+            &quot;street&quot;: &quot;Jr. RAMON ZAVALA&quot;,&#xd;
+            &quot;number&quot;: &quot;N° 164 - 180&quot;,&#xd;
+            &quot;neighborhood&quot;: &quot;Barranca&quot;,&#xd;
+            &quot;complement&quot;: &quot;- CC Megaplaza - Pasando área de la marca Aereal - Hombre&quot;,&#xd;
+            &quot;reference&quot;: null,&#xd;
+            &quot;geoCoordinates&quot;: [&#xd;
+                -77.76275,&#xd;
+                -10.75137&#xd;
+            ]&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;expectedOrderFormSections&quot;: [&#xd;
+        &quot;items&quot;,&#xd;
+        &quot;totalizers&quot;,&#xd;
+        &quot;clientProfileData&quot;,&#xd;
+        &quot;shippingData&quot;,&#xd;
+        &quot;paymentData&quot;,&#xd;
+        &quot;sellers&quot;,&#xd;
+        &quot;messages&quot;,&#xd;
+        &quot;marketingData&quot;,&#xd;
+        &quot;clientPreferencesData&quot;,&#xd;
+        &quot;storePreferencesData&quot;,&#xd;
+        &quot;giftRegistryData&quot;,&#xd;
+        &quot;ratesAndBenefitsData&quot;,&#xd;
+        &quot;openTextField&quot;,&#xd;
+        &quot;commercialConditionData&quot;,&#xd;
+        &quot;customData&quot;&#xd;
+    ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json; charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">az_botm=806e13758d7dfd51215f028cc40600e4; az_asm=C1B52FFDB23B6C8D0E5490432522D2762B921803DB9C7E1757CE741BA4F3050EE3A0E50AE2CE5F432E19B4BB71C7DE55E57FF0C3CCD4E0C44D8E94CACA6A4564; checkout.vtex.com=__ofid=9036f0dc00214c248418ceb71d1e8a57; rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9; CheckoutOrderFormOwnership=AGzcDtjBlfGT0YRcqM7IV0XdlFK8lcb2C96ZEBA6ZVevWF6%2Bnbj1nRpANqXg46%2BZDSNlA3Nq9nDiypp5U%2Bu5k%2BRWPXVMA01GGjeL%2B1hOVX%2Fp%2BC3q7yJIZTQkpABfllFxFQ1IB9gZMtr5EUXXdEl6PQ%3D%3D</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-requested-with" elementType="Header">
+                <stringProp name="Header.name">x-requested-with</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="simulacion de datos de entrega">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <stringProp name="Argument.value">{&#xd;
+    &quot;shippingData&quot;: {&#xd;
+        &quot;logisticsInfo&quot;: [&#xd;
+            {&#xd;
+                &quot;addressId&quot;: &quot;5109017147490&quot;,&#xd;
+                &quot;itemIndex&quot;: 0&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;selectedAddresses&quot;: [&#xd;
+            {&#xd;
+                &quot;addressType&quot;: &quot;residential&quot;,&#xd;
+                &quot;receiverName&quot;: &quot;test&quot;,&#xd;
+                &quot;addressId&quot;: &quot;5109017147490&quot;,&#xd;
+                &quot;isDisposable&quot;: true,&#xd;
+                &quot;postalCode&quot;: &quot;150201&quot;,&#xd;
+                &quot;city&quot;: &quot;Barranca&quot;,&#xd;
+                &quot;state&quot;: &quot;Lima&quot;,&#xd;
+                &quot;country&quot;: &quot;PER&quot;,&#xd;
+                &quot;street&quot;: null,&#xd;
+                &quot;number&quot;: null,&#xd;
+                &quot;neighborhood&quot;: &quot;Barranca&quot;,&#xd;
+                &quot;complement&quot;: null,&#xd;
+                &quot;reference&quot;: null,&#xd;
+                &quot;geoCoordinates&quot;: [],&#xd;
+                &quot;addressQuery&quot;: &quot;&quot;&#xd;
+            },&#xd;
+            {&#xd;
+                &quot;addressType&quot;: &quot;search&quot;,&#xd;
+                &quot;receiverName&quot;: null,&#xd;
+                &quot;addressId&quot;: &quot;TD114&quot;,&#xd;
+                &quot;isDisposable&quot;: true,&#xd;
+                &quot;postalCode&quot;: &quot;150201&quot;,&#xd;
+                &quot;city&quot;: &quot;Barranca&quot;,&#xd;
+                &quot;state&quot;: &quot;Lima&quot;,&#xd;
+                &quot;country&quot;: &quot;PER&quot;,&#xd;
+                &quot;street&quot;: &quot;Jr. RAMON ZAVALA&quot;,&#xd;
+                &quot;number&quot;: &quot;N° 164 - 180&quot;,&#xd;
+                &quot;neighborhood&quot;: &quot;Barranca&quot;,&#xd;
+                &quot;complement&quot;: &quot;- CC Megaplaza - Pasando área de la marca Aereal - Hombre&quot;,&#xd;
+                &quot;reference&quot;: null,&#xd;
+                &quot;geoCoordinates&quot;: [&#xd;
+                    -77.76275,&#xd;
+                    -10.75137&#xd;
+                ]&#xd;
+            }&#xd;
+        ]&#xd;
+    },&#xd;
+    &quot;orderFormId&quot;: &quot;9036f0dc00214c248418ceb71d1e8a57&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/checkout/pub/orderForms/simulation?sc=1&amp;rnbBehavior=0</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json; charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">az_botm=806e13758d7dfd51215f028cc40600e4; az_asm=C1B52FFDB23B6C8D0E5490432522D2762B921803DB9C7E1757CE741BA4F3050EE3A0E50AE2CE5F432E19B4BB71C7DE55E57FF0C3CCD4E0C44D8E94CACA6A4564; checkout.vtex.com=__ofid=9036f0dc00214c248418ceb71d1e8a57; rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9; CheckoutOrderFormOwnership=AGzcDtjBlfGT0YRcqM7IV0XdlFK8lcb2C96ZEBA6ZVevWF6%2Bnbj1nRpANqXg46%2BZDSNlA3Nq9nDiypp5U%2Bu5k%2BRWPXVMA01GGjeL%2B1hOVX%2Fp%2BC3q7yJIZTQkpABfllFxFQ1IB9gZMtr5EUXXdEl6PQ%3D%3D</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-requested-with" elementType="Header">
+                <stringProp name="Header.name">x-requested-with</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="refresh data outdated">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <stringProp name="Argument.value">{&quot;expectedOrderFormSections&quot;:[&quot;items&quot;,&quot;totalizers&quot;,&quot;clientProfileData&quot;,&quot;shippingData&quot;,&quot;paymentData&quot;,&quot;sellers&quot;,&quot;messages&quot;,&quot;marketingData&quot;,&quot;clientPreferencesData&quot;,&quot;storePreferencesData&quot;,&quot;giftRegistryData&quot;,&quot;ratesAndBenefitsData&quot;,&quot;openTextField&quot;,&quot;commercialConditionData&quot;,&quot;customData&quot;]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json; charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">checkout.vtex.com=__ofid=9036f0dc00214c248418ceb71d1e8a57; rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9; CheckoutOrderFormOwnership=AGzcDtjBlfGT0YRcqM7IV0XdlFK8lcb2C96ZEBA6ZVevWF6%2Bnbj1nRpANqXg46%2BZDSNlA3Nq9nDiypp5U%2Bu5k%2BRWPXVMA01GGjeL%2B1hOVX%2Fp%2BC3q7yJIZTQkpABfllFxFQ1IB9gZMtr5EUXXdEl6PQ%3D%3D; az_botm=eede622625b04c3bc651f83fa999157f; az_asm=8E08EEB638044CF826A57970152600810A8E093CA04C4544C72A662565520D9EFAB5299B92575419122382E5D50594F6D08F576391AEA35697C500FC68B59B24</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-requested-with" elementType="Header">
+                <stringProp name="Header.name">x-requested-with</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="data of amount to pay">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <stringProp name="Argument.value">{&#xd;
+    &quot;payments&quot;: [&#xd;
+        {&#xd;
+            &quot;paymentSystem&quot;: &quot;203&quot;,&#xd;
+            &quot;bin&quot;: null,&#xd;
+            &quot;accountId&quot;: null,&#xd;
+            &quot;tokenId&quot;: null,&#xd;
+            &quot;installments&quot;: 1,&#xd;
+            &quot;referenceValue&quot;: 529900,&#xd;
+            &quot;value&quot;: 529900,&#xd;
+            &quot;merchantSellerPayments&quot;: [&#xd;
+                {&#xd;
+                    &quot;id&quot;: &quot;OECHSLE&quot;,&#xd;
+                    &quot;installments&quot;: null,&#xd;
+                    &quot;referenceValue&quot;: 529900,&#xd;
+                    &quot;value&quot;: 529900,&#xd;
+                    &quot;interestRate&quot;: null,&#xd;
+                    &quot;installmentValue&quot;: 0&#xd;
+                }&#xd;
+            ]&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;giftCards&quot;: [],&#xd;
+    &quot;expectedOrderFormSections&quot;: [&#xd;
+        &quot;items&quot;,&#xd;
+        &quot;totalizers&quot;,&#xd;
+        &quot;clientProfileData&quot;,&#xd;
+        &quot;shippingData&quot;,&#xd;
+        &quot;paymentData&quot;,&#xd;
+        &quot;sellers&quot;,&#xd;
+        &quot;messages&quot;,&#xd;
+        &quot;marketingData&quot;,&#xd;
+        &quot;clientPreferencesData&quot;,&#xd;
+        &quot;storePreferencesData&quot;,&#xd;
+        &quot;giftRegistryData&quot;,&#xd;
+        &quot;ratesAndBenefitsData&quot;,&#xd;
+        &quot;openTextField&quot;,&#xd;
+        &quot;commercialConditionData&quot;,&#xd;
+        &quot;customData&quot;&#xd;
+    ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json; charset=UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">checkout.vtex.com=__ofid=9036f0dc00214c248418ceb71d1e8a57; rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9; az_botm=eede622625b04c3bc651f83fa999157f; az_asm=8E08EEB638044CF826A57970152600810A8E093CA04C4544C72A662565520D9EFAB5299B92575419122382E5D50594F6D08F576391AEA35697C500FC68B59B24; CheckoutOrderFormOwnership=%2BRg4DsnFIwdlRBn3KG%2BkvWGJpQuIDIDwIWtdNWt0VdeNxRVcAFSUxdN2V2lPqjEZ2ISNp0mhi1%2FhDB2bAbPf2m9JNWuyt4PtuEC3h0uF0V8rPjOZLTucvFyc5PtkKn38ZP3BLHxK0BMwpjxUj16A87oL%2FsN8tfqqYTYvUHZdqJuy3BxG6N5ozsjWdliQFcgw</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-requested-with" elementType="Header">
+                <stringProp name="Header.name">x-requested-with</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="success">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/checkout/gatewayCallback/1384699134400/Success</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9; az_botm=eede622625b04c3bc651f83fa999157f; az_asm=8E08EEB638044CF826A57970152600810A8E093CA04C4544C72A662565520D9EFAB5299B92575419122382E5D50594F6D08F576391AEA35697C500FC68B59B24; CheckoutOrderFormOwnership=%2BRg4DsnFIwdlRBn3KG%2BkvWGJpQuIDIDwIWtdNWt0VdeNxRVcAFSUxdN2V2lPqjEZ2ISNp0mhi1%2FhDB2bAbPf2m9JNWuyt4PtuEC3h0uF0V8rPjOZLTucvFyc5PtkKn38ZP3BLHxK0BMwpjxUj16A87oL%2FsN8tfqqYTYvUHZdqJuy3BxG6N5ozsjWdliQFcgw; Vtex_CHKO_Auth=5ZOlCmgpczTdHZpSBSR1daVsfUpz9m5jABrliR94Xu0=; CheckoutDataAccess=VTEX_CHK_Order_Auth=5ZOlCmgpczTdHZpSBSR1daVsfUpz9m5jABrliR94Xu0%3d; checkout.vtex.com=__ofid=6091c9a7fda94e4ebc44c99631dd8050</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">navigate</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="upgrade-insecure-requests" elementType="Header">
+                <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="checkout order placed">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="og" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">og</stringProp>
+                <stringProp name="Argument.value">1384699134400</stringProp>
+                <stringProp name="Argument.desc">og</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.oechsle.pe</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/checkout/orderPlaced/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="authority" elementType="Header">
+                <stringProp name="Header.name">authority</stringProp>
+                <stringProp name="Header.value">www.oechsle.pe</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-419,es;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">rrpvid=556051545825075; biggy-anonymous=uuAYqbO1Bgl66FA2y5Soo; ISSMB=ScreenMedia=0&amp;UserAcceptMobile=False; i18next=es; locale=es-PE; VTEXSC=sc=1; urlLastSearch=http://www.oechsle.pe/zapatos/zapatos-mujer/sandalias?PS=36; modalFechada=1703025346937; biggy-search-history=iphone%2015%20pro%20max,iphone%2015,iphone%201; IPI=UrlReferrer=https%3a%2f%2fwww.google.com%2f&amp;UsuarioGUID=; janus_sid=2a9ee184-a78b-4dad-a25e-a18d299c3de3; biggy-event-queue=; SGTS=D0EE0FD9A605F6EEA25E48D1F395C18D; vtex_session=eyJhbGciOiJFUzI1NiIsImtpZCI6IjE5NUJBQkNFNDVDRUU3RUVDOTlDMTJFRTJEMzg5RDAzRUZDOUFFQTIiLCJ0eXAiOiJqd3QifQ.eyJhY2NvdW50LmlkIjoiNWFkNjRiZjMtNGZiOS00MDY0LWEzMTktZWI0YWI2N2I0MzYxIiwiaWQiOiJhMDM4YmVhMS01YzIzLTQwNTktYTdmMS04MTFkODU2OTI0YzQiLCJ2ZXJzaW9uIjoyLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3MDM3MDg0NzcsImlhdCI6MTcwMzAxNzI3NywiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0ZWQ3NTI5LTRlZWYtNDEwZC1hMDA1LWEwNTQxZGI4YzM5OCJ9.AZ0MWCJ_dDajTVBYjPnXPlixkAZn8CNaiAhn4e0ytUXG00kLQad7o7QHfKCkXGeuPYKXqlx4cr9JrXlOYVwtaA; vtex_segment=eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6IlBFTiIsImN1cnJlbmN5U3ltYm9sIjoiUy8iLCJjb3VudHJ5Q29kZSI6IlBFUiIsImN1bHR1cmVJbmZvIjoiZXMtUEUiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9; az_botm=eede622625b04c3bc651f83fa999157f; az_asm=8E08EEB638044CF826A57970152600810A8E093CA04C4544C72A662565520D9EFAB5299B92575419122382E5D50594F6D08F576391AEA35697C500FC68B59B24; CheckoutOrderFormOwnership=%2BRg4DsnFIwdlRBn3KG%2BkvWGJpQuIDIDwIWtdNWt0VdeNxRVcAFSUxdN2V2lPqjEZ2ISNp0mhi1%2FhDB2bAbPf2m9JNWuyt4PtuEC3h0uF0V8rPjOZLTucvFyc5PtkKn38ZP3BLHxK0BMwpjxUj16A87oL%2FsN8tfqqYTYvUHZdqJuy3BxG6N5ozsjWdliQFcgw; Vtex_CHKO_Auth=5ZOlCmgpczTdHZpSBSR1daVsfUpz9m5jABrliR94Xu0=; CheckoutDataAccess=VTEX_CHK_Order_Auth=5ZOlCmgpczTdHZpSBSR1daVsfUpz9m5jABrliR94Xu0%3d; checkout.vtex.com=__ofid=3b1df7d839744234885db1c4f490a2dd</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://www.oechsle.pe/checkout</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Not_A Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;120&quot;, &quot;Brave&quot;;v=&quot;120&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">navigate</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="sec-gpc" elementType="Header">
+                <stringProp name="Header.name">sec-gpc</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="upgrade-insecure-requests" elementType="Header">
+                <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">C:\Users\VIVIANA\Desktop\Vivi\Personal\RETO-REALPLAZA\Escenario 2\results\results.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

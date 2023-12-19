@@ -1,0 +1,131 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1703024973067,12592,abrir pestaña del producto,200,OK,Http URL/API Test 1-1,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,1812,0,1006
+1703024974066,17894,abrir pestaña del producto,200,OK,Http URL/API Test 1-2,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,6766,0,812
+1703024991960,131310,buscar producto iphone,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: busca.oechsle.pe:443 failed to respond,Http URL/API Test 1-2,text,false,,2097,0,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,0,0,131309
+1703024978067,153678,abrir pestaña del producto,200,OK,Http URL/API Test 1-6,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,12356,0,10841
+1703024976067,157331,abrir pestaña del producto,200,OK,Http URL/API Test 1-4,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,13997,0,12402
+1703024979071,154643,abrir pestaña del producto,200,OK,Http URL/API Test 1-7,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,13117,0,10249
+1703024975068,161710,abrir pestaña del producto,200,OK,Http URL/API Test 1-3,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,13479,0,12138
+1703024977066,160135,abrir pestaña del producto,200,OK,Http URL/API Test 1-5,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,13303,0,11451
+1703024981066,157394,abrir pestaña del producto,200,OK,Http URL/API Test 1-9,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,10957,0,8284
+1703024985662,154580,buscar producto iphone,200,OK,Http URL/API Test 1-1,text,true,,403881,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,12824,0,4967
+1703024980067,160254,abrir pestaña del producto,200,OK,Http URL/API Test 1-8,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,11524,0,9257
+1703024982067,158314,abrir pestaña del producto,200,OK,Http URL/API Test 1-10,text,true,,304614,435,10,10,https://www.oechsle.pe/iphone-15-pro-max-256gb-esim---black-titanium-1000734619/p,13419,0,8391
+1703025123272,18228,agregar producto al carrito,200,OK,Http URL/API Test 1-2,text,true,,4675,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,18228,0,17104
+1703025140244,1517,agregar producto al carrito,200,OK,Http URL/API Test 1-1,text,true,,4672,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,1517,0,395
+1703025141761,6792,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-1,text,true,,33796,683,10,10,https://www.oechsle.pe/checkout,5037,0,0
+1703025148556,11147,check legal email,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: Host desconocido (api.oechsleonline.pe),Http URL/API Test 1-1,text,false,,2522,0,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,0,0,11147
+1703025159704,10421,first form,200,OK,Http URL/API Test 1-1,text,true,,4672,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,10421,0,0
+1703025170125,7508,metodo de entrega,200,OK,Http URL/API Test 1-1,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",7508,0,0
+1703025141502,37081,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-2,text,true,,33842,683,10,10,https://www.oechsle.pe/checkout,8958,0,0
+1703025136780,51134,buscar producto iphone,200,OK,Http URL/API Test 1-3,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,4729,0,3802
+1703025177635,22535,datos de despacho o entrega,200,OK,Http URL/API Test 1-1,text,true,,5939,3283,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,22535,0,0
+1703025133714,70430,buscar producto iphone,200,OK,Http URL/API Test 1-7,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,8549,0,6995
+1703025140322,64323,buscar producto iphone,200,OK,Http URL/API Test 1-8,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,4698,0,319
+1703025138460,66582,buscar producto iphone,200,OK,Http URL/API Test 1-9,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,10421,0,2246
+1703025178585,26458,check legal email,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: api.oechsleonline.pe:443 failed to respond,Http URL/API Test 1-2,text,false,,2101,0,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,0,0,22494
+1703025200171,4910,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-1,text,false,,635,2753,10,10,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,4910,0,0
+1703025131746,73870,buscar producto iphone,200,OK,Http URL/API Test 1-6,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,19031,0,9170
+1703025140382,65928,buscar producto iphone,200,OK,Http URL/API Test 1-10,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,12326,0,540
+1703025137203,69109,buscar producto iphone,200,OK,Http URL/API Test 1-5,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,17414,0,3514
+1703025133400,72952,buscar producto iphone,200,OK,Http URL/API Test 1-4,text,true,,404135,1210,10,10,https://busca.oechsle.pe/search?query=iphone+15+pro+max,22896,0,7184
+1703025204145,3152,agregar producto al carrito,200,OK,Http URL/API Test 1-7,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,3152,0,2210
+1703025205042,2257,agregar producto al carrito,200,OK,Http URL/API Test 1-9,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,2257,0,1403
+1703025204647,2713,agregar producto al carrito,200,OK,Http URL/API Test 1-8,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,2698,0,1858
+1703025205043,2422,first form,200,OK,Http URL/API Test 1-2,text,true,,5869,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,2418,0,1427
+1703025207360,163,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-8,text,true,,33796,683,10,10,https://www.oechsle.pe/checkout,111,0,0
+1703025205085,2520,refresh data outdated,200,OK,Http URL/API Test 1-1,text,true,,5945,1450,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,2508,0,1481
+1703025207297,342,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-7,text,true,,33796,683,10,10,https://www.oechsle.pe/checkout,127,0,0
+1703025205617,2139,agregar producto al carrito,200,OK,Http URL/API Test 1-6,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,2135,0,948
+1703025206352,1464,agregar producto al carrito,200,OK,Http URL/API Test 1-4,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,1443,0,317
+1703025206311,1535,agregar producto al carrito,200,OK,Http URL/API Test 1-5,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,1535,0,354
+1703025207758,151,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-6,text,true,,33796,683,10,10,https://www.oechsle.pe/checkout,102,0,0
+1703025207816,1120,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-4,text,true,,33796,683,10,10,https://www.oechsle.pe/checkout,619,0,0
+1703025207847,1369,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-5,text,true,,33796,683,10,10,https://www.oechsle.pe/checkout,1221,0,0
+1703025206310,2911,agregar producto al carrito,200,OK,Http URL/API Test 1-10,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,2906,0,306
+1703025207524,1699,check legal email,200,OK,Http URL/API Test 1-8,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,1699,0,237
+1703025207604,1624,data of amount to pay,200,OK,Http URL/API Test 1-1,text,true,,6084,2258,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,1624,0,0
+1703025207465,1935,metodo de entrega,200,OK,Http URL/API Test 1-2,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",1935,0,0
+1703025207299,2101,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-9,text,true,,33842,683,10,10,https://www.oechsle.pe/checkout,1937,0,0
+1703025207640,1764,check legal email,200,OK,Http URL/API Test 1-7,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,1764,0,217
+1703025187913,21536,agregar producto al carrito,200,OK,Http URL/API Test 1-3,text,true,,5869,1336,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/items?sc=1,21536,0,18391
+1703025209224,280,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-10,text,true,,33842,683,10,10,https://www.oechsle.pe/checkout,240,0,0
+1703025209224,619,first form,200,OK,Http URL/API Test 1-8,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,619,0,0
+1703025209450,425,https://www.oechsle.pe/checkout,200,OK,Http URL/API Test 1-3,text,true,,33842,683,10,10,https://www.oechsle.pe/checkout,220,0,0
+1703025207910,2044,check legal email,200,OK,Http URL/API Test 1-6,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,2044,0,1599
+1703025209217,751,check legal email,200,OK,Http URL/API Test 1-5,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,751,0,399
+1703025208937,1078,check legal email,200,OK,Http URL/API Test 1-4,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,1078,0,683
+1703025209402,634,check legal email,200,OK,Http URL/API Test 1-9,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,634,0,300
+1703025209505,556,check legal email,200,OK,Http URL/API Test 1-10,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,556,0,289
+1703025209844,379,metodo de entrega,200,OK,Http URL/API Test 1-8,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",379,0,0
+1703025209876,476,check legal email,200,OK,Http URL/API Test 1-3,text,true,,344,610,10,10,https://api.oechsleonline.pe/api/masterdata/v1/checks-legal?email=testRendimiento@gmail.com,476,0,190
+1703025209404,1052,first form,200,OK,Http URL/API Test 1-7,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,1032,0,0
+1703025209229,1635,success,500,Internal Server Error,Http URL/API Test 1-1,text,false,,1002,1079,10,10,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,1635,0,0
+1703025210061,892,first form,200,OK,Http URL/API Test 1-10,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,890,0,0
+1703025209954,1158,first form,200,OK,Http URL/API Test 1-6,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,1154,0,0
+1703025210456,668,metodo de entrega,200,OK,Http URL/API Test 1-7,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",668,0,0
+1703025209401,1747,datos de despacho o entrega,200,OK,Http URL/API Test 1-2,text,true,,6084,3283,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,1743,0,0
+1703025210015,1212,first form,200,OK,Http URL/API Test 1-4,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,1209,0,0
+1703025209969,1375,first form,200,OK,Http URL/API Test 1-5,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,1371,0,0
+1703025210954,390,metodo de entrega,200,OK,Http URL/API Test 1-10,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",390,0,0
+1703025210223,1237,datos de despacho o entrega,200,OK,Http URL/API Test 1-8,text,true,,6084,3283,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,1237,0,0
+1703025211112,399,metodo de entrega,200,OK,Http URL/API Test 1-6,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",399,0,0
+1703025210352,1236,first form,200,OK,Http URL/API Test 1-3,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,1232,0,0
+1703025211148,444,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-2,text,false,,635,2753,10,10,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,444,0,0
+1703025210037,1645,first form,200,OK,Http URL/API Test 1-9,text,true,,6014,1871,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/clientProfileData,1645,0,0
+1703025211228,468,metodo de entrega,200,OK,Http URL/API Test 1-4,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",468,0,0
+1703025211344,440,metodo de entrega,200,OK,Http URL/API Test 1-5,text,true,,722,938,10,10,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",440,0,0
+1703025211124,732,datos de despacho o entrega,200,OK,Http URL/API Test 1-7,text,true,,6084,3283,10,10,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,720,0,0
+1703025210865,1018,checkout order placed,200,OK,Http URL/API Test 1-1,text,true,,22302,1071,10,10,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,995,0,0
+1703025211461,435,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-8,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,435,0,0
+1703025211344,607,datos de despacho o entrega,200,OK,Http URL/API Test 1-10,text,true,,6084,3283,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,604,0,0
+1703025211588,455,metodo de entrega,200,OK,Http URL/API Test 1-3,text,true,,722,938,9,9,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",455,0,0
+1703025211683,437,metodo de entrega,200,OK,Http URL/API Test 1-9,text,true,,722,938,9,9,"https://www.oechsle.pe/api/dataentities/LC/documents/db7e4d27-113a-11ed-835d-1205c9a423b1?_fields=isActive,metodoEntrega",437,0,0
+1703025211592,568,refresh data outdated,200,OK,Http URL/API Test 1-2,text,true,,6090,1450,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,567,0,0
+1703025211512,768,datos de despacho o entrega,200,OK,Http URL/API Test 1-6,text,true,,6084,3283,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,757,0,0
+1703025211856,488,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-7,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,488,0,0
+1703025211696,691,datos de despacho o entrega,200,OK,Http URL/API Test 1-4,text,true,,6084,3283,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,688,0,0
+1703025211951,473,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-10,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,473,0,0
+1703025212161,504,data of amount to pay,200,OK,Http URL/API Test 1-2,text,true,,6084,2258,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,500,0,0
+1703025212281,584,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-6,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,584,0,0
+1703025211784,1081,datos de despacho o entrega,200,OK,Http URL/API Test 1-5,text,true,,6084,3283,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,1081,0,0
+1703025212388,492,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-4,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,492,0,0
+1703025211896,1096,refresh data outdated,200,OK,Http URL/API Test 1-8,text,true,,6090,1450,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,1088,0,0
+1703025212424,572,refresh data outdated,200,OK,Http URL/API Test 1-10,text,true,,6090,1450,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,568,0,0
+1703025212344,696,refresh data outdated,200,OK,Http URL/API Test 1-7,text,true,,6090,1450,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,691,0,0
+1703025212044,1228,datos de despacho o entrega,200,OK,Http URL/API Test 1-3,text,true,,6084,3283,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,1228,0,0
+1703025212666,635,success,500,Internal Server Error,Http URL/API Test 1-2,text,false,,1002,1079,9,9,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,635,0,0
+1703025212121,1183,datos de despacho o entrega,200,OK,Http URL/API Test 1-9,text,true,,6084,3283,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/shippingData,1183,0,0
+1703025212866,630,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-5,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,630,0,0
+1703025212997,627,data of amount to pay,200,OK,Http URL/API Test 1-10,text,true,,6084,2258,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,627,0,0
+1703025212993,722,data of amount to pay,200,OK,Http URL/API Test 1-8,text,true,,6084,2258,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,719,0,0
+1703025213040,739,data of amount to pay,200,OK,Http URL/API Test 1-7,text,true,,6084,2258,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,736,0,0
+1703025213305,495,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-9,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,495,0,0
+1703025212881,948,refresh data outdated,200,OK,Http URL/API Test 1-4,text,true,,6090,1450,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,948,0,0
+1703025212866,970,refresh data outdated,200,OK,Http URL/API Test 1-6,text,true,,6090,1450,9,9,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,970,0,0
+1703025213273,723,simulacion de datos de entrega,400,Bad Request,Http URL/API Test 1-3,text,false,,635,2753,9,9,https://www.oechsle.pe/api/checkout/pub/orderForms/simulation?sc=1&rnbBehavior=0,723,0,0
+1703025213301,695,checkout order placed,200,OK,Http URL/API Test 1-2,text,true,,22218,1071,9,9,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,615,0,0
+1703025213496,508,refresh data outdated,200,OK,Http URL/API Test 1-5,text,true,,6090,1450,8,8,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,506,0,0
+1703025213625,443,success,500,Internal Server Error,Http URL/API Test 1-10,text,false,,1002,1079,8,8,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,443,0,0
+1703025213716,632,success,500,Internal Server Error,Http URL/API Test 1-8,text,false,,1002,1079,8,8,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,632,0,0
+1703025213779,638,success,500,Internal Server Error,Http URL/API Test 1-7,text,false,,1002,1079,8,8,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,638,0,0
+1703025213837,580,data of amount to pay,200,OK,Http URL/API Test 1-6,text,true,,6084,2258,8,8,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,580,0,0
+1703025213829,654,data of amount to pay,200,OK,Http URL/API Test 1-4,text,true,,6084,2258,8,8,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,652,0,0
+1703025214004,552,data of amount to pay,200,OK,Http URL/API Test 1-5,text,true,,6084,2258,8,8,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,536,0,0
+1703025214069,556,checkout order placed,200,OK,Http URL/API Test 1-10,text,true,,22218,1071,8,8,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,507,0,0
+1703025213996,635,refresh data outdated,200,OK,Http URL/API Test 1-3,text,true,,6090,1450,7,7,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,635,0,0
+1703025213800,952,refresh data outdated,200,OK,Http URL/API Test 1-9,text,true,,6090,1450,7,7,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57?refreshOutdatedData=true,952,0,0
+1703025214349,573,checkout order placed,200,OK,Http URL/API Test 1-8,text,true,,22218,1071,7,7,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,520,0,0
+1703025214418,504,success,500,Internal Server Error,Http URL/API Test 1-6,text,false,,1002,1079,7,7,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,504,0,0
+1703025214484,438,success,500,Internal Server Error,Http URL/API Test 1-4,text,false,,1002,1079,7,7,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,438,0,0
+1703025214418,578,checkout order placed,200,OK,Http URL/API Test 1-7,text,true,,22218,1071,6,6,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,534,0,0
+1703025214556,527,success,500,Internal Server Error,Http URL/API Test 1-5,text,false,,1002,1079,5,5,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,527,0,0
+1703025214753,487,data of amount to pay,200,OK,Http URL/API Test 1-9,text,true,,6084,2258,5,5,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,487,0,0
+1703025214632,676,data of amount to pay,200,OK,Http URL/API Test 1-3,text,true,,6084,2258,5,5,https://www.oechsle.pe/api/checkout/pub/orderForm/9036f0dc00214c248418ceb71d1e8a57/attachments/paymentData,676,0,0
+1703025214922,542,checkout order placed,200,OK,Http URL/API Test 1-6,text,true,,22218,1071,5,5,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,503,0,0
+1703025214922,840,checkout order placed,200,OK,Http URL/API Test 1-4,text,true,,22218,1071,4,4,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,782,0,0
+1703025215084,737,checkout order placed,200,OK,Http URL/API Test 1-5,text,true,,22218,1071,3,3,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,692,0,0
+1703025215241,583,success,500,Internal Server Error,Http URL/API Test 1-9,text,false,,1002,1079,2,2,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,583,0,0
+1703025215309,666,success,500,Internal Server Error,Http URL/API Test 1-3,text,false,,1002,1079,2,2,https://www.oechsle.pe/checkout/gatewayCallback/1384699134400/Success,666,0,0
+1703025215825,591,checkout order placed,200,OK,Http URL/API Test 1-9,text,true,,22218,1071,2,2,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,564,0,0
+1703025215976,600,checkout order placed,200,OK,Http URL/API Test 1-3,text,true,,22218,1071,1,1,https://www.oechsle.pe/checkout/orderPlaced/?og=1384699134400,572,0,0
